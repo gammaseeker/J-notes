@@ -62,5 +62,25 @@ function isChecked(check_id, content_id){
     }
 }
 {% endhighlight %}
-
+{% highlight css %}
+#container
+{
+    text-align:center;
+    width:25%; 
+    height: 20%;
+    margin: 0 auto;
+}
+input
+{
+   width: 17%;
+   height: 30px;
+   float: left; 
+   margin-left: 47%;
+}
+button
+{
+    margin-right: 22%;
+    float: right;
+}
+{% endhighlight %}
 So the last thing remaining is to add in that sidebar. 
