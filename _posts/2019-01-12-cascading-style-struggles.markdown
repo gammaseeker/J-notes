@@ -52,10 +52,6 @@ Next was to berid of the awkward placement of the delete feature, and replace it
 </div>
 {% endhighlight %}
 {% highlight css %}
-a
-{
-    color:inherit;
-}
 #delete
 {
     float: right;
