@@ -65,7 +65,8 @@ function isChecked(check_id, content_id){
 {% highlight css %}
 a
 {
-    color:inherit;}
+    color:inherit;
+}
 #delete
 {
     float: right;
