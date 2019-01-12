@@ -34,24 +34,22 @@ button
 }
 {% endhighlight %}
 Next was to berid of the awkward placement of the delete feature, and replace it with a trashcan icon along with adding in checkboxes that would denote whether a task was completed or not. I also took the liberty of adding in a functionality where if the checkbox was checked off, it would strikethrough the adjacent text.
-{% highlight css %}
-#delete
-{
-    float: right;
-    color: red;
-}
-
-.form-check-label
-{
-    font-weight: inherit;
-}
-
-.form-check-input
-{
-    float: left;
-    width: 17px;
-    height: 17px;
-}
+{% highlight html %}
+<div id = "container" class="list-group">
+      <% todos.forEach( function( todo ) { %>
+        <span class="list-group-item list-group-item-action"> 
+                <input type="checkbox" class="form-check-input" id="check<%= todo._id %>" onclick="isChecked('check<%= todo._id %>', 'content<%= todo._id %>')">
+                <label class="form-check-label" for="check<%= todo._id %>" id="content<%= todo._id %>">
+                    <%= todo.title %>
+                </label>
+            <span id="delete"> 
+                <a href="/destroy/<%= todo._id %>" title="Delete this todo item">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a> 
+            </span>
+        </span>
+      <% }); %>
+</div>
 {% endhighlight %}
 {% highlight javascript %}
 function isChecked(check_id, content_id){
