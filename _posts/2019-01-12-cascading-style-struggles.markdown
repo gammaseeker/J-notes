@@ -11,7 +11,7 @@ Recently, I’ve been working on a todo list application that I call ToDoThis. H
 ![todo-current]({{site.url}}/{{site.baseurl}}/assets/img/todo-current.png)<br>
 Not very impressive style-wise, but it gets the job done like any todo list app. It creates items on the list, and you can delete them when you’ve finished them. The improvement I want to make to the frontend of my application is this:<br>
 ![todo-wireframe]({{site.url}}/{{site.baseurl}}/assets/img/todo-wireframe.png)<br>
-So my first move is to reduce the width of the borders of the todo list items and align the input box and add item button with the borders of the items.
+So my first move was to reduce the width of the borders of the todo list items and align the input box and add item button with the borders of the items.
 {% highlight css %}
 #container
 {
@@ -33,3 +33,56 @@ button
     float: right;
 }
 {% endhighlight %}
+Next was to berid of the awkward placement of the delete feature, and replace it with a trashcan icon along with adding in checkboxes that would denote whether a task was completed or not. I also took the liberty of adding in a functionality where if the checkbox was checked off, it would strikethrough the adjacent text.
+{% highlight html %}
+    <div id = "container" class="list-group">
+          <% todos.forEach( function( todo ) { %>
+            <span class="list-group-item list-group-item-action"> 
+                    <input type="checkbox" class="form-check-input" id="check<%= todo._id %>" onclick="isChecked('check<%= todo._id %>', 'content<%= todo._id %>')">
+                    <label class="form-check-label" for="check<%= todo._id %>" id="content<%= todo._id %>">
+                        <%= todo.title %>
+                    </label>
+                <span id="delete"> 
+                    <a href="/destroy/<%= todo._id %>" title="Delete this todo item">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a> 
+                </span>
+            </span>
+          <% }); %>
+    </div>
+{% endhighlight %}
+{% highlight javascript %}
+function isChecked(check_id, content_id){
+    cbox = document.getElementById(check_id);
+    content = document.getElementById(content_id);
+    if(cbox.checked){
+        content.style.textDecoration = "line-through";
+    }else{
+        content.style.textDecoration = "initial";
+    }
+}
+{% endhighlight %}
+{% highlight css%}
+a
+{
+    color:inherit;
+}
+#delete
+{
+    float: right;
+    color: red;
+}
+
+.form-check-label
+{
+    font-weight: inherit;
+}
+
+.form-check-input
+{
+    float: left;
+    width: 17px;
+    height: 17px;
+}
+{% endhighlight %}
+So the last thing remaining is to add in that sidebar. 
