@@ -62,7 +62,7 @@ function isChecked(check_id, content_id){
     }
 }
 {% endhighlight %}
-{% highlight css %}
+{% highlight css lineos%}
 a
 {
     color:inherit;
