@@ -32,6 +32,27 @@ button
     margin-right: 22%;
     float: right;
 }
+a
+{
+    color:inherit;
+}
+#delete
+{
+    float: right;
+    color: red;
+}
+
+.form-check-label
+{
+    font-weight: inherit;
+}
+
+.form-check-input
+{
+    float: left;
+    width: 17px;
+    height: 17px;
+}
 {% endhighlight %}
 Next was to berid of the awkward placement of the delete feature, and replace it with a trashcan icon along with adding in checkboxes that would denote whether a task was completed or not. I also took the liberty of adding in a functionality where if the checkbox was checked off, it would strikethrough the adjacent text.
 {% highlight html %}
@@ -60,29 +81,6 @@ function isChecked(check_id, content_id){
     }else{
         content.style.textDecoration = "initial";
     }
-}
-{% endhighlight %}
-{% highlight css lineos%}
-a
-{
-    color:inherit;
-}
-#delete
-{
-    float: right;
-    color: red;
-}
-
-.form-check-label
-{
-    font-weight: inherit;
-}
-
-.form-check-input
-{
-    float: left;
-    width: 17px;
-    height: 17px;
 }
 {% endhighlight %}
 So the last thing remaining is to add in that sidebar. 
