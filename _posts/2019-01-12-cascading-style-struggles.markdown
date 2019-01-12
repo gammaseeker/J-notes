@@ -9,6 +9,27 @@ I think most people struggle to understand CSS, including me. It has been three 
 ![css-monster]({{site.url}}/{{site.baseurl}}/assets/img/css-monster.jpg)<br>
 Recently, I’ve been working on a todo list application that I call ToDoThis. Here is the current status of the website:
 ![todo-current]({{site.url}}/{{site.baseurl}}/assets/img/todo-current.png)<br>
-Not very impressive style-wise, but it gets the job done like any todo list app. It creates items on the list, and you can delete them when you’ve finished them. The improvement I want to make to the frontend of my application is this:
+Not very impressive style-wise, but it gets the job done like any todo list app. It creates items on the list, and you can delete them when you’ve finished them. The improvement I want to make to the frontend of my application is this:<br>
 ![todo-wireframe]({{site.url}}/{{site.baseurl}}/assets/img/todo-wireframe.png)<br>
-
+So my first move is to reduce the width of the borders of the todo list items and align the input box and add item button with the borders of the items.
+{% highlight css %}
+#container
+{
+    text-align:center;
+    width:25%; 
+    height: 20%;
+    margin: 0 auto;
+}
+input
+{
+   width: 17%;
+   height: 30px;
+   float: left; 
+   margin-left: 47%;
+}
+button
+{
+    margin-right: 22%;
+    float: right;
+}
+{% endhighlight %}
