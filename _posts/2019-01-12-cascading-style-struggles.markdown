@@ -32,16 +32,6 @@ button
     margin-right: 22%;
     float: right;
 }
-a
-{
-    color:inherit;
-}
-#delete
-{
-    float: right;
-    color: red;
-}
-
 .form-check-label
 {
     font-weight: inherit;
