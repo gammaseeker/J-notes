@@ -67,21 +67,11 @@ function isChecked(check_id, content_id){
 {
     border: 2px solid #ddd;
 }
-a
-{
-    color:inherit;
-}
 #delete
 {
     float: right;
     color: red;
 }
-
-.form-check-label
-{
-    font-weight: inherit;
-}
-
 .form-check-input
 {
     float: left;
