@@ -62,23 +62,33 @@ function isChecked(check_id, content_id){
     }
 }
 {% endhighlight %}
-{% highlight css %}
+```
 .list-group-item
 {
     border: 2px solid #ddd;
+}
+a
+{
+    color:inherit;
 }
 #delete
 {
     float: right;
     color: red;
 }
+
+.form-check-label
+{
+    font-weight: inherit;
+}
+
 .form-check-input
 {
     float: left;
     width: 17px;
     height: 17px;
 }
-{% endhighlight %}
+```
 So the last thing remaining is to add in that sidebar. 
 {% highlight html %}
 <div class="side-col">
@@ -121,5 +131,5 @@ html,body
     height: 100%;
 }
 ```
-And with that, ToDoThis is <i>slightly</i> better styled.<br>
+And with that, ToDoThis is <i>slightly</i> better styled. Check out my code <a href="https://github.com/gammaseeker/ToDoThis">here</a><br>
 ![todo-done]({{site.url}}/{{site.baseurl}}/assets/img/todo-done.png)
