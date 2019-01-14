@@ -90,7 +90,7 @@ So the last thing remaining is to add in that sidebar.
         </div>
 </div>
 {% endhighlight %}
-{% highlight css %}
+```
 html,body 
 { 
     height:100%; 
@@ -120,6 +120,6 @@ html,body
     border-right: 2px solid black;
     height: 100%;
 }
-{% endhighlight %}
+```
 And with that, ToDoThis is <i>slightly</i> better styled.<br>
 ![todo-done]({{site.url}}/{{site.baseurl}}/assets/img/todo-done.png)
