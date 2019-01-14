@@ -33,7 +33,7 @@ button
     float: right;
 }
 {% endhighlight %}
-Next was to berid of the awkward placement of the delete feature, and replace it with a trashcan icon along with adding in checkboxes that would denote whether a task was completed or not. I also took the liberty of adding in a functionality where if the checkbox was checked off, it would strikethrough the adjacent text.
+Next was to be rid of the awkward placement of the delete feature, and replace it with a trash can icon along with adding in checkboxes that would denote whether a task was completed or not. I also took the liberty of adding in a functionality where if the checkbox was checked off, it would strikethrough the adjacent text.
 {% highlight html %}
 <div id = "container" class="list-group">
       <% todos.forEach( function( todo ) { %>
@@ -90,3 +90,46 @@ a
 }
 {% endhighlight %}
 So the last thing remaining is to add in that sidebar. 
+{% highlight html %}
+<div class="side-col">
+        <div id="border-div">
+                <img id="pfp" src="img/pfp.jpg">
+        </div>
+        <div id="ltg">
+                Long Term Goals:
+        </div>
+</div>
+{% endhighlight %}
+{% highlight css %}
+html,body 
+{ 
+    height:100%; 
+}
+#pfp 
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.side-col
+{
+    margin-left: 2%;
+    float: left;
+    height: 100%;
+}
+#border-div
+{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#ltg
+{
+    font-size: 18pt;
+    text-align: center;
+    border-right: 2px solid black;
+    height: 100%;
+}
+{% endhighlight %}
+And with that, ToDoThis is <i>slightly</i> better styled.<br>
+![todo-done]({{site.url}}/{{site.baseurl}}/assets/img/todo-done.png)
