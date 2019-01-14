@@ -131,5 +131,6 @@ html,body
     height: 100%;
 }
 ```
+![todo-sidebar]({{site.url}}/{{site.baseurl}}/assets/img/todo-sidebar.png)
 And with that, ToDoThis is <i>slightly</i> better styled. Check out my code <a href="https://github.com/gammaseeker/ToDoThis">here</a><br>
 ![todo-done]({{site.url}}/{{site.baseurl}}/assets/img/todo-done.png)
