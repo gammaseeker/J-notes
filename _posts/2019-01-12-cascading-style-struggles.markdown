@@ -2,7 +2,7 @@
 layout: post
 title: Cascading Style Struggles
 date: 2019-01-12 1:42:59 -0500
-categories: Personal
+categories: Programming 
 ---
 
 I think most people struggle to understand CSS, including me. It has been three years since my web development class in junior year of high school where I first learned CSS, and admittedly that’s where my skills with that language peaked. Without constant practice, the technology slowly turns from a science to magic. This is something that I am determined to change about myself. To the common populace, people do not really care or understand complex backend operations, but they can definitely identify when a website looks “aesthetic.” I want to take you along with me on my quest to conquer CSS.
