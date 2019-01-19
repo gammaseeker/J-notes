@@ -4,7 +4,7 @@ title: Stretch First, Get Smart Later
 date: 2019-01-18 20:25:00 -0500
 categories: Programming
 ---
-Recently, I finished a book called <i> Smart, Faster, Better</i> by Charles Duhigg. One of the primary lessons that this book teaches is to strike a balance between wild dreams and pragmatic goals. The balance between thinking big and thinking small. So a strategy to achieve this balance is to create stretch goals supplemented with SMART goals. The idea here is that creating SMART goals provide one a more concrete plan to achieving their dreams. This type of system is something I want to implement in ToDoThis. As a disclaimer, I am going to disregard any frontend work, my main object is to get this feature working.
+Recently, I finished a book called <i> Smart, Faster, Better</i> by Charles Duhigg. One of the primary lessons that this book teaches is to strike a balance between wild dreams and pragmatic goals. The balance between thinking big and thinking small. So a strategy to achieve this balance is to create stretch goals supplemented with SMART goals. The idea here is that creating SMART goals provide one a more concrete plan to achieving their dreams. This type of system is something I want to implement in ToDoThis. As a disclaimer, I am going to disregard any frontend work, my main object is to get this feature working.<br>
 We need to provide the user with a form to fill out where they detail their stretch goal, and every aspect of their SMART goals. Once they submit this form, the stretch goal will appear on the to-do list with its SMART goals underneath it. So our first consideration is where to put this form, and for the time being I’m going to have a button on `index.ejs` that will send the user to `stretch.ejs` which will host the form.
 {% highlight html %}
 <div class="container">
@@ -112,6 +112,6 @@ Finally we need to write the HTML that will display the data from the form. The 
 <% }); %>
 {% endhighlight %}
 ![todo-stretch-done]({{site.url}}/{{site.baseurl}}/assets/img/todo-stretch-done.png)<br>
-I know you’re probably throwing up at the sight of the app, but don’t worry we’re going to make all of this look spiffy!
-To learn more about this goal setting methodology see this <a href="https://www.meaningfulhq.com/stretch-goals-smart-goals-examples.html">article.</a>
+I know you’re probably throwing up at the sight of the app, but don’t worry we’re going to make all of this look spiffy!<br>
+To learn more about this goal setting methodology see this <a href="https://www.meaningfulhq.com/stretch-goals-smart-goals-examples.html">article.</a><br>
 Check out my code <a href="https://github.com/gammaseeker/ToDoThis">here.</a>
