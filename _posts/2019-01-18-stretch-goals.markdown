@@ -32,7 +32,7 @@ We need to provide the user with a form to fill out where they detail their stre
 </div>
 {% endhighlight %}
 ![todo-stretch]({{site.url}}/{{site.baseurl}}/assets/img/todo-stretch.png)<br>
-Next we have to edit our `todoSchema` schema such that it can handle the new information we’re passing into it.
+Next we have to edit our `todoSchema` schema such that it can handle the new information we’re passing into it.<br>
 `app.js`
 {% highlight javascript %}
 var todoSchema = new mongoose.Schema({
@@ -69,7 +69,7 @@ app.post("/stretch-post", function(req, res){
     );
 });
 {% endhighlight %}
-Finally we need to write the HTML that will display the data from the form. The logic I have written into `index.ejs` checks to see if the user is just doing a quick add onto the to-do list or is setting a full on stretch goal.
+Finally we need to write the HTML that will display the data from the form. The logic I have written into `index.ejs` checks to see if the user is just doing a quick add onto the to-do list or is setting a full on stretch goal.<br>
 `index.ejs`
 {% highlight html %}
 <% todos.forEach( function( todo ) { %>
