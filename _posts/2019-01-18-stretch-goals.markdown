@@ -7,7 +7,6 @@ categories: Programming
 Recently, I finished a book called <i> Smart, Faster, Better</i> by Charles Duhigg. One of the primary lessons that this book teaches is to strike a balance between wild dreams and pragmatic goals. The balance between thinking big and thinking small. So a strategy to achieve this balance is to create stretch goals supplemented with SMART goals. The idea here is that creating SMART goals provide one a more concrete plan to achieving their dreams. This type of system is something I want to implement in ToDoThis. As a disclaimer, I am going to disregard any frontend work, my main object is to get this feature working.
 We need to provide the user with a form to fill out where they detail their stretch goal, and every aspect of their SMART goals. Once they submit this form, the stretch goal will appear on the to-do list with its SMART goals underneath it. So our first consideration is where to put this form, and for the time being I’m going to have a button on `index.ejs` that will send the user to `stretch.ejs` which will host the form.
 {% highlight html %}
-<% include partials/header %>
 <div class="container">
     <form method="POST" action="/stretch-post">
         <label>Stretch Goal:</label>
@@ -31,7 +30,6 @@ We need to provide the user with a form to fill out where they detail their stre
         <button class="btn btn-primary" type="submit">Add Item</button>
     </form>
 </div>
-<% include partials/footer %>
 {% endhighlight %}
 ![todo-stretch]({{site.url}}/{{site.baseurl}}/assets/img/todo-stretch.png)<br>
 Next we have to edit our `todoSchema` schema such that it can handle the new information we’re passing into it.
