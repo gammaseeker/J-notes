@@ -42,6 +42,7 @@ Here is the spooky bit: what happens if I let `A = uh-oh`? Let's take a look at 
 
 <strong> 1) </strong>If `uh-oh(uh-oh)` goes into an infinite loop, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `TRUE`. But this means that `uh-oh` would halt when fed itself as input. Which would contradict our definition that `uh-oh` would loop forever if the program halted.
 <br>
+<br>
 <strong> 2) </strong>If `uh-oh(uh-oh)` halts, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `FALSE`. This means that `uh-oh` would loop infinitely when fed itself as input. Which would contradict our definition that `uh-oh` would halt if the program looped infinitely.
 
 ![dizzy-face]({{site.url}}/{{site.baseurl}}/assets/img/dizzy-face.png)<br>
