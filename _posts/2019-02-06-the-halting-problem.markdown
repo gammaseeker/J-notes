@@ -6,7 +6,7 @@ categories: Theory
 ---
 Theoretical computer science has always been a fascinating branch of computer science because it is the field that challenges one's mathematical maturity and critical thinking skills. You feel like a bonafide genius everytime you complete a proof. I am currently taking a class on the theory of computation and one neat problem we discussed is: <strong>The Halting Problem</strong> 
 <br>
-<br>
+
 "Consider a function called `halt(A, I)` which takes in a program `A`, and an input into the program, `I`. `halt(A, I)` will return `true` if the program halts, else it will return `false` if the program goes into an infinite loop. Given a computer program and some input to that program, will the program go into an infinite loop when fed that input?"
 ```
 bool halt(A, I){
