@@ -28,17 +28,17 @@ Everything looks pretty normal so far, but we can actually do something really s
 What if we were to create another function let's call it `uh-oh(A)` which will call `halt_on_self(A)`. 
 The function will loop infinitely if `halt_on_self(A)` halts. However if `halt_on_self(A)` loops infinitely, then `uh-oh(A)` will halt.
 
-```
-void uh-oh(A)
-    if(halt_on_self(A))
+{% raw %}
+void uh-oh(A){
+    if(halt_on_self(A)){
         loop forever;
-     else 
-        halt;    
-    
+    } else { 
+        halt;
+    }
+}
+{% endraw %}
 
-```
-
-Here is the spooky bit: what happens if I let A = uh-oh? Let's take a look at each possible outcome <br>
+Here is the spooky bit: what happens if I let `A = uh-oh`? Let's take a look at each possible outcome <br>
 <ul>
     If `uh-oh(uh-oh)` goes into an infinite loop, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `TRUE`. But this means that `uh-oh` would halt when fed itself as input. Which would contradict our definition that `uh-oh` would loop forever if the program halted.
 
