@@ -29,13 +29,13 @@ What if we were to create another function let's call it `uh-oh(A)` which will c
 The function will loop infinitely if `halt_on_self(A)` halts. However if `halt_on_self(A)` loops infinitely, then `uh-oh(A)` will halt.
 
 ```
-void uh-oh(A){
-    if(halt_on_self(A)){
+void uh-oh(A)
+    if(halt_on_self(A))
         loop forever;
-    } else {
+     else 
         halt;    
-    }
-}
+    
+
 ```
 
 Here is the spooky bit: what happens if I let `A = uh-oh`? Let's take a look at each possible outcome <br>
