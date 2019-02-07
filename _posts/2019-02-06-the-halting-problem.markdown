@@ -37,7 +37,7 @@ void uh-oh(A){
     }
 }
 {% endraw %}
-
+}}
 Here is the spooky bit: what happens if I let `A = uh-oh`? Let's take a look at each possible outcome <br>
 <ul>
     If `uh-oh(uh-oh)` goes into an infinite loop, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `TRUE`. But this means that `uh-oh` would halt when fed itself as input. Which would contradict our definition that `uh-oh` would loop forever if the program halted.
