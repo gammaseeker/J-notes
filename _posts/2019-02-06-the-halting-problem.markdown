@@ -23,4 +23,23 @@ bool halt_on_self(A){
 }
 ```
 
-Everything looks pretty normal so far, but we can actually do something really spooky with the two functions we have created.
+Everything looks pretty normal so far, but we can actually do something really spooky with the two functions we have created. 
+What if we were to create another function let's call it `uh-oh(A)` which will call `halt_on_self(A)`. 
+The function will loop infinitely if `halt_on_self(A)` halts. However if `halt_on_self(A)` loops infinitely, then `uh-oh(A)` will halt.
+```
+void uh-oh(A){
+    if(halt_on_self(A)){
+        loop forever;
+    } else {
+        halt;    
+    }
+}
+```
+Here is the spooky bit: what happens if I pass `uh-oh` as `A`? Let's take a look at each possible outcome <br>
+<ul>
+    <li>If `uh-oh(uh-oh)` goes into an infinite loop, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `TRUE`. But this means that `uh-oh` would halt when fed itself as input. Which would contradict our definition that `uh-oh` would loop forever if the program halted. </li>
+
+    <li> If `uh-oh(uh-oh)` halts, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `FALSE`. This means that `uh-oh` would loop infinitely when fed itself as input. Which would contradict our definition that `uh-oh` would halt if the program looped infinitely.</li>
+</ul>
+![dizzy-face]({{}site.url}/{{site-baseurl}}/assets/img/dizzy-face.png)<br>
+What is the purpose of this thought experiment? Since we arrive at a paradox in both outcomes, we have proved that the halting problem is <strong> undecidable.</strong>
