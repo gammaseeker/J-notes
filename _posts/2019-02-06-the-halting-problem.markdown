@@ -40,9 +40,9 @@ void uh-oh(A){
 
 Here is the spooky bit: what happens if I pass `uh-oh` as `A`? Let's take a look at each possible outcome <br>
 <ul>
-    <li>If `uh-oh(uh-oh)` goes into an infinite loop, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `TRUE`. But this means that `uh-oh` would halt when fed itself as input. Which would contradict our definition that `uh-oh` would loop forever if the program halted. </li>
+    If `uh-oh(uh-oh)` goes into an infinite loop, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `TRUE`. But this means that `uh-oh` would halt when fed itself as input. Which would contradict our definition that `uh-oh` would loop forever if the program halted.
 
-    <li> If `uh-oh(uh-oh)` halts, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `FALSE`. This means that `uh-oh` would loop infinitely when fed itself as input. Which would contradict our definition that `uh-oh` would halt if the program looped infinitely.</li>
+ If `uh-oh(uh-oh)` halts, then that means `halt_on_self(uh-oh)` and `halt(uh-oh, uh-oh)` returned `FALSE`. This means that `uh-oh` would loop infinitely when fed itself as input. Which would contradict our definition that `uh-oh` would halt if the program looped infinitely.
 </ul>
 ![dizzy-face]({{}site.url}/{{site-baseurl}}/assets/img/dizzy-face.png)<br>
 What is the purpose of this thought experiment? Since we arrive at a paradox in both outcomes, we have proved that the halting problem is <strong> undecidable.</strong>
